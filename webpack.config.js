@@ -42,7 +42,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new MinifyPlugin(),
+    new MinifyPlugin({}, {comments: false}),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       minify: true,
