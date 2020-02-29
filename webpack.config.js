@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 
 const INDEX_DIR = path.resolve(__dirname, "index.html");
 const JS_APP_DIR = path.resolve(__dirname, "src", "js", "index.js");
@@ -41,8 +42,10 @@ module.exports = {
     ]
   },
   plugins: [
+    new MinifyPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
+      minify: true,
       inlineSource: '.(js|css)$' // embed all javascript and css inline
     }),
     new HtmlWebpackInlineSourcePlugin()
