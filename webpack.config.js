@@ -3,7 +3,7 @@ const webpack = require("webpack");
 
 const INDEX_DIR = path.resolve(__dirname, "index.html");
 const JS_APP_DIR = path.resolve(__dirname, "js", "index.js");
-const JS_BUILD_DIR = path.resolve(__dirname, "build", "js");
+const JS_BUILD_DIR = path.resolve(__dirname);
 const JS_BUILD_FILENAME = "app.bundle.js";
 const JS_BUILD_SERVER = path.resolve(JS_BUILD_DIR, JS_BUILD_FILENAME);
 
