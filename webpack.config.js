@@ -11,7 +11,7 @@ const JS_BUILD_FILENAME = "app.bundle.js";
 const JS_BUILD_SERVER = path.resolve(JS_BUILD_DIR, JS_BUILD_FILENAME);
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: JS_APP_DIR,
   output: {
     path: JS_BUILD_DIR,
